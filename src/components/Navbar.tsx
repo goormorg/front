@@ -22,7 +22,7 @@ const path = [
     icon: "search",
   },
   {
-    url: "/setting",
+    url: "/user",
     name: "세팅",
     icon: "settings",
   },

@@ -66,6 +66,16 @@ function RoadmapPage() {
         <div
           css={css({
             position: "absolute",
+            top: "0px",
+            left: 0,
+            height: "100px",
+            width: "100%",
+            backgroundColor: "#2FAA3B",
+          })}
+        ></div>
+        <div
+          css={css({
+            position: "absolute",
             top: "100px",
             left: 0,
             backgroundColor: "#2FAA3B",
@@ -74,7 +84,11 @@ function RoadmapPage() {
           <img src={roadmapLine} width="375px" alt="이전" />
         </div>
         {buttons.map((el) => (
-          <RoadmapButton top={el.top} left={el.left}>
+          <RoadmapButton
+            top={el.top}
+            left={el.left}
+            color={el.label == "일요일" ? "white" : "blue"}
+          >
             {el.label}
           </RoadmapButton>
         ))}
@@ -82,13 +96,13 @@ function RoadmapPage() {
         <div
           css={css({
             position: "absolute",
-            top: "650px",
+            top: "641px",
             paddingBottom: "4rem",
             flexDirection: "column",
             left: 0,
             display: "flex",
             width: "100%",
-            background: "linear-gradient(#2FAA3B, #ccd9cd)",
+            background: "linear-gradient(#2FAA3B, #b1c9b3, #d7ded8)",
           })}
         >
           {isEnable && (
@@ -123,7 +137,17 @@ function RoadmapPage() {
   );
 }
 
-function RoadmapButton({ children, top, left }: any) {
+function RoadmapButton({ children, top, left, color = "blue" }: any) {
+  const colorSet: any = {
+    blue: {
+      backgroundColor: "#005DE8",
+      color: "#ffffff",
+    },
+    white: {
+      backgroundColor: "#ffffff",
+      color: "#000000",
+    },
+  };
   return (
     <button
       css={css({
@@ -137,8 +161,8 @@ function RoadmapButton({ children, top, left }: any) {
         alignItems: "center",
         borderRadius: "20rem",
         border: "none",
-        backgroundColor: "#3785E0",
-        color: "#ffffff",
+        backgroundColor: colorSet[color].backgroundColor,
+        color: colorSet[color].color,
       })}
     >
       {children}
