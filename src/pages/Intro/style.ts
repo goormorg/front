@@ -45,3 +45,14 @@ export const ButtonWrapper = styled.div`
   flex-direction: column;
   gap: 5px;
 `;
+
+export const ModalWrapper = styled.dialog`
+  border-radius: 25px;
+  border: 0;
+  padding: 0;
+
+  ::backdrop {
+    opacity: 0.8;
+    background: #000;
+  }
+`;
