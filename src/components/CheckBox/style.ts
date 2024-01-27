@@ -8,8 +8,8 @@ export const Wrapper = styled.div`
 export const CheckBox = styled.div<{ isChecked: boolean }>`
   width: 15px;
   height: 15px;
-  border: 1px solid
-    ${({ isChecked }) => (isChecked ? "#42bd4e" : "rgba(20, 20, 20, 0.27)")};
+  border: ${({ isChecked }) =>
+    isChecked ? "0" : "1px solid rgba(20, 20, 20, 0.27)"};
   cursor: pointer;
 `;
 
