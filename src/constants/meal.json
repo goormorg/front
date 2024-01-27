@@ -5,7 +5,8 @@
     "mealDescription": "닭가슴살 볶음밥으로 건강한 식단을 구성해보세요.",
     "mealImageUrl": "https://img-cf.kurly.com/shop/data/goodsview/20220805/gv10000401311_1.jpg",
     "kcal": 232,
-    "provideBy": "하림"
+    "provideBy": "하림",
+    "type": "up,down,maintain"
   },
   {
     "id": 1,
@@ -13,7 +14,8 @@
     "mealDescription": "삼치구이로 건강한 식단을 구성해보세요.",
     "mealImageUrl": "https://img.cjthemarket.com/images/file/product/354/20230227090515586.jpg?SF=webp",
     "kcal": 150,
-    "provideBy": "비비고"
+    "provideBy": "비비고",
+    "type": "up,down,maintain"
   },
   {
     "id": 2,
@@ -21,7 +23,8 @@
     "mealDescription": "군고구마로 건강한 식단을 구성해보세요.",
     "mealImageUrl": "https://qi-o.qoo10cdn.com/goods_image_big/0/2/7/4/333190274_l.jpg",
     "kcal": 300,
-    "provideBy": "해남땅고구마"
+    "provideBy": "해남땅고구마",
+    "type": "up,maintain"
   },
   {
     "id": 3,
@@ -29,7 +32,8 @@
     "mealDescription": "치킨 샐러드로 건강한 식단을 구성해보세요.",
     "mealImageUrl": "https://i.namu.wiki/i/_cLeYQStb5Xf8h6vC4ZtRoGFvsF1-rb9wqUMJ9pS510fYeJCGOnh-CQ0A0n9YNHbZ5Roi4WX3NB5RTPdYmhJyg.webp",
     "kcal": 180,
-    "provideBy": "하림"
+    "provideBy": "하림",
+    "type": "down,maintain"
   },
   {
     "id": 4,
@@ -37,7 +41,8 @@
     "mealDescription": "두부 스테이크로 건강한 식단을 구성해보세요.",
     "mealImageUrl": "https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTJfMTYg/MDAxNjg5MTQ4NTA5MzI3.DSyspWdmh-6-raqS2d4Cs9RCfzt8CWMcJzalXXInoL0g.yKFqd_IewIAPeKaOvj8brwUsVDwyyTXyPQAGS9okBLcg.PNG.ezday1/2.PNG?type=w800",
     "kcal": 321,
-    "provideBy": "비비고"
+    "provideBy": "비비고",
+    "type": "down"
   },
   {
     "id": 5,
@@ -45,7 +50,8 @@
     "mealDescription": "곤약 비빔면으로 건강한 식단을 구성해보세요.",
     "mealImageUrl": "https://recipe1.ezmember.co.kr/cache/recipe/2019/02/21/f808ca2a80c1fa3148ed20fbea72047d1.jpg",
     "kcal": 300,
-    "provideBy": "비비고"
+    "provideBy": "비비고",
+    "type": "down"
   },
   {
     "id": 6,
@@ -53,6 +59,34 @@
     "mealDescription": "샌드위치로 건강한 식단을 구성해보세요.",
     "mealImageUrl": "https://recipe1.ezmember.co.kr/cache/recipe/2021/12/23/8f1022f46829257d51b21cf1d08d72241.jpg",
     "kcal": 130,
-    "provideBy": "한입만토스트"
+    "provideBy": "한입만토스트",
+    "type": "up,maintain"
+  },
+  {
+    "id": 7,
+    "mealName": "바나나",
+    "mealDescription": "바나나로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://health.chosun.com/site/data/img_dir/2023/07/14/2023071401917_0.jpg",
+    "kcal": 200,
+    "provideBy": "태국",
+    "type": "maintain"
+  },
+  {
+    "id": 8,
+    "mealName": "투게더",
+    "mealDescription": "투게더로 몸집을 키우는 식단을 구성해보세요.",
+    "mealImageUrl": "https://i.namu.wiki/i/j9nHHoKNMs_NRsXR5rDxKfwg-lNL8f-bcpLPxfmotdqeTXpeCEscwfyPmgX_X4WvCJmpGVGPZxrbVaAEuZLVOw.webp",
+    "kcal": 500,
+    "provideBy": "빙그레",
+    "type": "up"
+  },
+  {
+    "id": 9,
+    "mealName": "큐브스테이크",
+    "mealDescription": "큐브스테이크로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://img.siksinhot.com/place/1472579187665420.jpg",
+    "kcal": 320,
+    "provideBy": "건강축산",
+    "type": "up"
   }
 ]
