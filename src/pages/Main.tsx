@@ -10,14 +10,21 @@ function MainPage() {
     return (
         <>
         <Container>
-        <p>main</p>
-        <Button color="light">버튼</Button>
-        <Button color="blue">버튼</Button>
+            <div css={css({
+                display: "flex",
+                flexDirection: "column"
+            })}>
+                <Button color="light">버튼</Button>
+                <Button color="blue">버튼</Button>
+                <Button color="green">버튼</Button>
 
-        <Input></Input>
-        <Modal isOpen={false}>
-            scsc
-        </Modal>
+                <Input></Input>
+                <Modal isOpen={false}>
+                    scsc
+                </Modal>
+            </div>
+        <p>main</p>
+
 
         </Container>
         <Navbar></Navbar>
