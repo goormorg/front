@@ -23,10 +23,22 @@ const SignUpModal = () => {
   const [formUserData, setFormUserData] = useAtom(formAtom);
   const navigate = useNavigate();
 
+  function isValidEmail(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function isValidTelNum(num: string): boolean {
+    const numRegex = /^\d{2,3}-?\d{3,4}-?\d{4}$/;
+    return numRegex.test(num);
+  }
+
   const handleSignUp = () => {
     if (
       (selectAll || !arr.includes(false) || arr.indexOf(false) === 2) &&
-      !inputArr.includes("")
+      !inputArr.includes("") &&
+      isValidEmail(inputArr[1]) &&
+      isValidTelNum(inputArr[2])
     ) {
       setFormUserData({
         ...formUserData,
