@@ -13,6 +13,10 @@ export const TitleWrapper = styled.div`
   justify-content: space-between;
 `;
 
+export const Temp = styled.div`
+  margin-top: 73px;
+`;
+
 export const Title = styled.span`
   color: #141414;
   font-family: Pretendard;
@@ -21,4 +25,17 @@ export const Title = styled.span`
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.72px;
+`;
+
+export const CheckBoxContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+`;
+
+export const Line = styled.div`
+  width: 263px;
+  height: 1px;
+  background: #f1f1f1;
+  margin: 18px 0;
 `;
