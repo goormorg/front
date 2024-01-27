@@ -75,7 +75,7 @@ const SignUpModal = () => {
       <S.InputContainer>
         {inputArr.map((v, i) => (
           <Input
-            width={"264px"}
+            width={"219px"}
             placeholder={inputTextArr[i]}
             value={inputArr[i]}
             onChange={(e: any) => {

@@ -50,9 +50,9 @@ export const ModalWrapper = styled.dialog`
   border-radius: 25px;
   border: 0;
   padding: 0;
+  overflow: hidden;
 
   ::backdrop {
-    opacity: 0.8;
-    background: #000;
+    background: rgba(0, 0, 0, 0.9);
   }
 `;
