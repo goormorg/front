@@ -7,7 +7,7 @@ type ButtonType = {
     children?: any
     onClick?: any
     disable?: boolean
-    color?: "light" | "blue"
+    color?: "light" | "blue" | "white"
 
 }
 
@@ -22,6 +22,11 @@ function Button({ children, onClick, disable, color = 'light' }: ButtonType) {
             "backgroundColor": "#266DF6",
             "color": "#FBFBFD",
             "hoverBackgroundColor": "#205ed6"
+        },
+        "white": {
+            "backgroundColor": "#ffffff",
+            "color": "#000000",
+            "hoverBackgroundColor": "#ffffff"
         },
     }
 
