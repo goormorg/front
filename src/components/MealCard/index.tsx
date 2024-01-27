@@ -4,8 +4,8 @@ const mock = {
   time: "아침",
   title: "신라면 오리지널/진순이",
   nutrition: {
-    kcal: 280,
-    carbohydrate: 44,
+    kcal: "280Kcal",
+    carbohydrate: "44g",
     sugars: "3g",
     province: "9g",
     protein: "6g",

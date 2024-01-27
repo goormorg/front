@@ -1,13 +1,14 @@
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
-  width: 312px;
-  height: 274px;
+  width: 276px;
+  height: 238px;
   border-radius: 25px;
   background: #fff;
+  padding: 18px;
 `;
 
-const text = styled.span`
+const text = styled.p`
   font-size: 16px;
   font-weight: 400;
   letter-spacing: -0.32px;
@@ -19,6 +20,8 @@ export const Time = styled(text)`
 
 export const Title = styled(text)`
   color: #141414;
+  margin-top: 4px;
+  margin-bottom: 24px;
 `;
 
 export const SmallSpan = styled.span`
@@ -49,4 +52,5 @@ export const Contents = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
+  margin-top: 12px;
 `;

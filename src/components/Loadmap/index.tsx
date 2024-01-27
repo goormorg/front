@@ -9,6 +9,8 @@ import { Modal } from "components/Modal";
 import { Title } from "components/Title";
 import SelectExample from "components/SelectExample";
 
+import { MealCard } from "components";
+
 type LoadmapMenuType = {
   title?: string;
   date?: string;
@@ -16,7 +18,6 @@ type LoadmapMenuType = {
   type?: string;
   isLeft?: boolean;
 };
-
 
 function Loadmap() {
   const [items, setItems] = useState<LoadmapMenuType[]>([
@@ -39,6 +40,7 @@ function Loadmap() {
 
   return (
     <>
+      <MealCard />
       <Title>로드맵</Title>
       <div
         css={css({
