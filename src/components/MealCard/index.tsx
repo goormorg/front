@@ -1,6 +1,23 @@
 import * as S from "./style";
 
-const mock = {
+type MealCard = {
+  mock: {
+    time?: string;
+    title?: string;
+    nutrition: {
+      kcal?: string;
+      carbohydrate?: string;
+      sugars?: string;
+      province?: string;
+      protein?: string;
+      saturatedFat?: string;
+      salt?: string;
+      calcium?: string;
+    };
+  };
+};
+
+const mocktest = {
   time: "아침",
   title: "신라면 오리지널/진순이",
   nutrition: {
@@ -15,7 +32,7 @@ const mock = {
   },
 };
 
-const MealCard = () => (
+const MealCard = ({ mock }: MealCard) => (
   <S.Wrapper>
     <S.Time>{mock.time}</S.Time>
     <S.Title>{mock.title}</S.Title>

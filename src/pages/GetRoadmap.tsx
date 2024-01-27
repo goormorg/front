@@ -16,7 +16,7 @@ function GetRoadmapPage() {
 
   const getAiAnswer = async () => {
     try {
-      const result = await AIAPI.get({
+      const result = await AIAPI.getMore({
         gender: "남자",
         age: "17세",
         weight: "60kg",
@@ -30,7 +30,50 @@ function GetRoadmapPage() {
 
       localStorage.setItem(
         "roadmap",
-        JSON.stringify([getJson["아침"], getJson["점심"], getJson["저녁"]])
+        JSON.stringify([
+          {
+            time: "아침",
+            title: getJson["아침"]["메뉴"].join(","),
+            nutrition: {
+              kcal: getJson["아침"]["영양소"]["칼로리"],
+              carbohydrate: getJson["아침"]["영양소"]["탄수화물"],
+              sugars: getJson["아침"]["영양소"]["당류"],
+              province: getJson["아침"]["영양소"]["지방"],
+              protein: getJson["아침"]["영양소"]["단백질"],
+              saturatedFat: getJson["아침"]["영양소"]["포화지방"],
+              salt: getJson["아침"]["영양소"]["나트륨"],
+              calcium: getJson["아침"]["영양소"]["칼슘"],
+            },
+          },
+          {
+            time: "점심",
+            title: getJson["점심"]["메뉴"].join(","),
+            nutrition: {
+              kcal: getJson["점심"]["영양소"]["칼로리"],
+              carbohydrate: getJson["점심"]["영양소"]["탄수화물"],
+              sugars: getJson["점심"]["영양소"]["당류"],
+              province: getJson["점심"]["영양소"]["지방"],
+              protein: getJson["점심"]["영양소"]["단백질"],
+              saturatedFat: getJson["점심"]["영양소"]["포화지방"],
+              salt: getJson["점심"]["영양소"]["나트륨"],
+              calcium: getJson["점심"]["영양소"]["칼슘"],
+            },
+          },
+          {
+            time: "저녁",
+            title: getJson["저녁"]["메뉴"].join(","),
+            nutrition: {
+              kcal: getJson["저녁"]["영양소"]["칼로리"],
+              carbohydrate: getJson["저녁"]["영양소"]["탄수화물"],
+              sugars: getJson["저녁"]["영양소"]["당류"],
+              province: getJson["저녁"]["영양소"]["지방"],
+              protein: getJson["저녁"]["영양소"]["단백질"],
+              saturatedFat: getJson["저녁"]["영양소"]["포화지방"],
+              salt: getJson["저녁"]["영양소"]["나트륨"],
+              calcium: getJson["저녁"]["영양소"]["칼슘"],
+            },
+          },
+        ])
       );
 
       console.log(getJson);
@@ -48,7 +91,7 @@ function GetRoadmapPage() {
   };
 
   useEffect(() => {
-    //getAiAnswer();
+    getAiAnswer();
   }, []);
 
   return (
@@ -74,11 +117,7 @@ function GetRoadmapPage() {
               flexDirection: "column",
               width: "100%",
             })}
-          >
-            <p>아침: {menu[0].join(",")}</p>
-            <p>점심: {menu[1].join(",")}</p>
-            <p>저녁: {menu[2].join(",")}</p>
-          </div>
+          ></div>
         </div>
       </Container>
       <Navbar></Navbar>

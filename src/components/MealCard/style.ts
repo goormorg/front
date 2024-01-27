@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   border-radius: 25px;
   background: #fff;
   padding: 18px;
+  border: 0.1rem solid #e8eaee;
 `;
 
 const text = styled.p`

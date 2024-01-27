@@ -7,7 +7,7 @@ import { Container } from "../components/Container";
 import { Navbar } from "../components/Navbar";
 import { Input } from "../components/Input";
 import { Modal } from "../components/Modal";
-import { Loadmap } from "components";
+import { Loadmap, MealCard } from "components";
 import roadmapLine from "assets/roadmapLine.svg";
 import { AIAPI } from "api";
 
@@ -50,14 +50,14 @@ function RoadmapPage() {
     },
   ]);
 
-  const [menu, setMenu] = useState<string[][]>([[""], [""], [""]]);
+  const [menu, setMenu] = useState<any[]>([{}, {}, {}]);
+  const [isEnable, setIsEnable] = useState(false);
 
   useEffect(() => {
-    //getAiAnswer();
-
     const roadmap: any = localStorage.getItem("roadmap");
 
     setMenu(JSON.parse(roadmap));
+    setIsEnable(true);
   }, []);
 
   return (
@@ -82,27 +82,40 @@ function RoadmapPage() {
         <div
           css={css({
             position: "absolute",
-            top: "700px",
+            top: "650px",
             paddingBottom: "4rem",
+            flexDirection: "column",
             left: 0,
             display: "flex",
             width: "100%",
+            background: "linear-gradient(#2FAA3B, #ccd9cd)",
           })}
         >
-          <div
-            css={css({
-              borderRadius: "0.6rem",
-              border: "0.1rem solid #E8EAEE",
-              padding: "1rem",
-              display: "flex",
-              flexDirection: "column",
-              width: "100%",
-            })}
-          >
-            <p>아침: {menu[0].join(",")}</p>
-            <p>점심: {menu[1].join(",")}</p>
-            <p>저녁: {menu[2].join(",")}</p>
-          </div>
+          {isEnable && (
+            <div
+              css={css({
+                borderRadius: "0.6rem",
+                padding: "1rem",
+                margin: "1rem",
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+              })}
+            >
+              <h2 css={css({ color: "#ffffff" })}>
+                오늘의 식단을 <br />
+                확인하세요.
+              </h2>
+
+              <>
+                <MealCard mock={menu[0]}></MealCard>
+
+                <MealCard mock={menu[1]}></MealCard>
+
+                <MealCard mock={menu[2]}></MealCard>
+              </>
+            </div>
+          )}
         </div>
       </Container>
       <Navbar></Navbar>
