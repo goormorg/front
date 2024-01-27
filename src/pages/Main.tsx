@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+
 import React from "react";
 import { css } from '@emotion/react'
 import { Button } from "../components/Button";
@@ -13,22 +15,13 @@ function MainPage() {
         <Container>
             <div css={css({
                 display: "flex",
-                flexDirection: "column"
+                flexDirection: "column",
+                justifyContent: "center",
+                width: "100%"
             })}>
-                <Button color="light">버튼</Button>
-                <Button color="blue">버튼</Button>
-                <Button color="green">버튼</Button>
-
-                <Input></Input>
-                <Modal isOpen={false}>
-                    scsc
-                </Modal>
 
                 <Loadmap></Loadmap>
             </div>
-        <p>main</p>
-
-
         </Container>
         <Navbar></Navbar>
  
