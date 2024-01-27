@@ -17,16 +17,17 @@ const Aim = ({ goPrev }: AimProps) => {
   const handleSubmit = async () => {
     await axios.post(
       process.env.REACT_APP_BASE_URL + "/v1/api/auth/signUp",
-      formUserData,
+      formUserData
     );
     const { data } = await axios.post(
       process.env.REACT_APP_BASE_URL + "/v1/api/auth/signIn",
       {
         email: formUserData.email,
         password: formUserData.password,
-      },
+      }
     );
     localStorage.setItem("token", data.token);
+    localStorage.setItem("email", formUserData.email);
     navigate("/");
   };
 

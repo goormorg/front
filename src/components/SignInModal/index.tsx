@@ -6,12 +6,26 @@ import { Button } from "components/Button";
 import { useAtom } from "jotai";
 import formAtom from "contexts/formAtom";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const SignInModal = () => {
   const [email, setEmail] = useState<string>("");
   const [pw, setPw] = useState<string>("");
 
   const navigate = useNavigate();
+
+  const url = process.env.REACT_APP_BASE_URL;
+
+  const login = async () => {
+    const { data } = await axios.post(url + "/v1/api/auth/signIn", {
+      email: email,
+      password: pw,
+    });
+
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("email", email);
+    navigate("/");
+  };
 
   function isValidEmail(email: string): boolean {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
