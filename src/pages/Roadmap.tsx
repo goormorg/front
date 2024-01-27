@@ -10,8 +10,11 @@ import { Modal } from "../components/Modal";
 import { Loadmap, MealCard } from "components";
 import roadmapLine from "assets/roadmapLine.svg";
 import { AIAPI } from "api";
+import { useNavigate } from "react-router-dom";
 
 function RoadmapPage() {
+  const navigate = useNavigate();
+
   const [buttons, setButtons] = useState([
     {
       top: 80,
@@ -71,8 +74,28 @@ function RoadmapPage() {
             height: "100px",
             width: "100%",
             backgroundColor: "#2FAA3B",
+            display: "flex",
+            justifyContent: "space-between",
           })}
-        ></div>
+        >
+          <div
+            onClick={() => navigate("/")}
+            css={css({
+              padding: "1rem",
+              color: "#ffffff",
+            })}
+          >
+            <span className="material-icons">arrow_back_ios</span>
+          </div>
+          <div
+            css={css({
+              padding: "1.1rem",
+              color: "#ffffff",
+            })}
+          >
+            <p>오늘의 식단 로드맵</p>
+          </div>
+        </div>
         <div
           css={css({
             position: "absolute",
