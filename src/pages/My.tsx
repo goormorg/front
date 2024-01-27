@@ -290,14 +290,15 @@ const InputWrapper = styled.div`
 const BigInput = styled.input`
   color: #000;
   text-align: right;
-  font-size: 72px;
+  font-size: 64px;
   font-weight: 400;
   letter-spacing: -4.32px;
   outline: none;
   border: none;
   background: none;
 
-  width: 150px;
+  width: 100px;
+  padding-right: 3px;
 `;
 
 const Box = styled.div`
