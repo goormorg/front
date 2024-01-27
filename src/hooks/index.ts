@@ -1,1 +1,1 @@
-export * from "./useGetFoodImage";
+export { default as useGetFoodImage } from "./useGetFoodImage";

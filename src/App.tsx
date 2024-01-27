@@ -4,6 +4,10 @@ import { Intro, MainPage, LoginPage, MyPage, SearchPage } from "pages";
 
 import { SelectExample } from "components";
 
+import { useGetFoodImage } from "hooks";
+
+import { useEffect, useState } from "react";
+
 enum PATH {
   login = "/login",
   main = "/",
@@ -14,8 +18,16 @@ enum PATH {
 }
 
 function App() {
+  const [state, setState] = useState<string>("");
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useGetFoodImage("사과", setState);
+  }, []);
+
   return (
     <div className="App">
+      <img alt="테스트" src={state} />
       <BrowserRouter>
         <Routes>
           <Route path={PATH.login} element={<LoginPage />}></Route>
