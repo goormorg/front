@@ -1,16 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { MainPage } from "./pages/Main";
-import { LoginPage } from "./pages/Login";
-import { MyPage } from "./pages/My";
-import { SearchPage } from "./pages/Search";
 
-import { Intro } from "pages";
+import { Intro, MainPage, LoginPage, MyPage, SearchPage } from "pages";
 
 enum PATH {
   login = "/login",
   main = "/",
   user = "/user",
   search = "/search",
+  intro = "/intro",
   test = "/test",
 }
 
@@ -23,7 +20,7 @@ function App() {
           <Route path={PATH.main} element={<MainPage />}></Route>
           <Route path={PATH.user} element={<MyPage />}></Route>
           <Route path={PATH.search} element={<SearchPage />}></Route>
-          <Route path={PATH.test} element={<Intro />}></Route>
+          <Route path={PATH.intro} element={<Intro />}></Route>
 
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
