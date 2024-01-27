@@ -5,14 +5,14 @@ type MealCard = {
     time?: string;
     title?: string;
     nutrition: {
-      kcal?: string;
-      carbohydrate?: string;
-      sugars?: string;
-      province?: string;
-      protein?: string;
-      saturatedFat?: string;
-      salt?: string;
-      calcium?: string;
+      kcal?: string | any;
+      carbohydrate?: string | any;
+      sugars?: string | any;
+      province?: string | any;
+      protein?: string | any;
+      saturatedFat?: string | any;
+      salt?: string | any;
+      calcium: string | any;
     };
   };
 };
@@ -41,7 +41,10 @@ const MealCard = ({ mock }: MealCard) => (
       <S.DetailWrapper>
         <S.Detail>하루 대사량의</S.Detail>
         <S.Description>
-          {Math.round((Number(mock.nutrition.kcal) / 2100) * 100)}%
+          {Math.round(
+            (Number(mock.nutrition.kcal.match(/\d+/)[0]) / 2100) * 100
+          )}
+          %
         </S.Description>
       </S.DetailWrapper>
     </S.DesWrapper>
@@ -51,7 +54,10 @@ const MealCard = ({ mock }: MealCard) => (
         <S.DetailWrapper>
           <S.Detail>기초 영상소 하루치의</S.Detail>
           <S.Description>
-            {Math.round((Number(mock.nutrition.carbohydrate) / 130) * 100)}%
+            {Math.round(
+              (Number(mock.nutrition.carbohydrate.match(/\d+/)[0]) / 130) * 100
+            )}
+            %
           </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
@@ -60,7 +66,10 @@ const MealCard = ({ mock }: MealCard) => (
         <S.DetailWrapper>
           <S.Detail>=</S.Detail>
           <S.Description>
-            {Math.round((Number(mock.nutrition.sugars) / 100) * 100)}%
+            {Math.round(
+              (Number(mock.nutrition.sugars.match(/\d+/)[0]) / 100) * 100
+            )}
+            %
           </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
@@ -69,7 +78,10 @@ const MealCard = ({ mock }: MealCard) => (
         <S.DetailWrapper>
           <S.Detail>=</S.Detail>
           <S.Description>
-            {Math.round((Number(mock.nutrition.province) / 50) * 100)}%
+            {Math.round(
+              (Number(mock.nutrition.province.match(/\d+/)[0]) / 50) * 100
+            )}
+            %
           </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
@@ -78,7 +90,10 @@ const MealCard = ({ mock }: MealCard) => (
         <S.DetailWrapper>
           <S.Detail>=</S.Detail>
           <S.Description>
-            {Math.round((Number(mock.nutrition.protein) / 55) * 100)}%
+            {Math.round(
+              (Number(mock.nutrition.protein.match(/\d+/)[0]) / 55) * 100
+            )}
+            %
           </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
@@ -87,7 +102,10 @@ const MealCard = ({ mock }: MealCard) => (
         <S.DetailWrapper>
           <S.Detail>=</S.Detail>
           <S.Description>
-            {Math.round((Number(mock.nutrition.saturatedFat) / 15) * 100)}%
+            {Math.round(
+              (Number(mock.nutrition.saturatedFat.match(/\d+/)[0]) / 15) * 100
+            )}
+            %
           </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
@@ -96,7 +114,10 @@ const MealCard = ({ mock }: MealCard) => (
         <S.DetailWrapper>
           <S.Detail>=</S.Detail>
           <S.Description>
-            {Math.round((Number(mock.nutrition.salt) / 2000) * 100)}%
+            {Math.round(
+              (Number(mock.nutrition.salt.match(/\d+/)[0]) / 2000) * 100
+            )}
+            %
           </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
@@ -105,7 +126,10 @@ const MealCard = ({ mock }: MealCard) => (
         <S.DetailWrapper>
           <S.Detail>=</S.Detail>
           <S.Description>
-            {Math.round((Number(mock.nutrition.calcium) / 700) * 100)}%
+            {Math.round(
+              (Number(mock.nutrition.calcium.match(/\d+/)[0]) / 700) * 100
+            )}
+            %
           </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
