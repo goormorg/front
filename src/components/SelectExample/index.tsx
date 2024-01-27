@@ -12,9 +12,13 @@ const SelectExample: React.FC<Props> = ({ type }) => {
       {mealsArr.map((meal) => (
         <div>
           <span>{meal.mealName}</span>
+          <br />
           <span>{meal.mealDescription}</span>
+          <br />
           <span>{meal.kcal}</span>
+          <br />
           <span>{meal.provideBy}</span>
+          <br />
           <img
             src={meal.mealImageUrl}
             alt="사진을 찾을 수 없음"

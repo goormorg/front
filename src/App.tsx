@@ -3,11 +3,14 @@ import { MainPage } from "./pages/Main";
 import { LoginPage } from "./pages/Login";
 import { MyPage } from "./pages/My";
 
+import { SelectExample } from "components";
+
 enum PATH {
   login = "/login",
   main = "/",
   user = "/user",
   search = "/search",
+  test = "/test",
 }
 
 function App() {
@@ -19,6 +22,7 @@ function App() {
           <Route path={PATH.main} element={<MainPage />}></Route>
           <Route path={PATH.user} element={<MyPage />}></Route>
           <Route path={PATH.search} element={<MyPage />}></Route>
+          <Route path={PATH.test} element={<SelectExample type="up" />}></Route>
 
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
