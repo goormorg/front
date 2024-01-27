@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import backArrow from "assets/backArrow.svg";
 import * as S from "./style";
 import { useAtom } from "jotai";
 import formAtom from "contexts/formAtom";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 interface AimProps {
   goPrev: () => void;
@@ -13,10 +14,26 @@ const Aim = ({ goPrev }: AimProps) => {
   const [formUserData, setFormUserData] = useAtom(formAtom);
   const navigate = useNavigate();
 
-  const handleSubmit = () => {
-    
-    navigate('/')
+  const handleSubmit = async () => {
+    await axios.post(
+      process.env.REACT_APP_BASE_URL + "/v1/api/auth/signUp",
+      formUserData,
+    );
+    const { data } = await axios.post(
+      process.env.REACT_APP_BASE_URL + "/v1/api/auth/signIn",
+      {
+        email: formUserData.email,
+        password: formUserData.password,
+      },
+    );
+    localStorage.setItem("token", data.token);
+    navigate("/");
   };
+
+  useEffect(() => {
+    if (formUserData.target) handleSubmit();
+  }, [formUserData]);
+
   return (
     <S.Layout>
       <img src={backArrow} onClick={goPrev} width="14px" alt="이전" />
@@ -31,7 +48,6 @@ const Aim = ({ goPrev }: AimProps) => {
         value="건강한 생활"
         onClick={(e) => {
           setFormUserData({ ...formUserData, target: "HEALTHY_LIFE" });
-          handleSubmit();
         }}
       />
       <S.Button
