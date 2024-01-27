@@ -1,7 +1,6 @@
 import * as S from "./style";
 
-import { CheckBox } from "components";
-
+import { CheckBox, Input } from "components";
 import { useState } from "react";
 
 const textArr = [
@@ -10,9 +9,12 @@ const textArr = [
   "(선택) 마케팅 활용 및 광고정보 수신 동의",
 ] as const;
 
+const inputTextArr = ["이름", "이메일", "전화번호", "비밀번호"] as const;
+
 const SignUpModal = () => {
   const [selectAll, setSelectAll] = useState<boolean>(false);
   const [arr, setArr] = useState<boolean[]>(new Array(3).fill(false));
+  const [inputArr, setInputArr] = useState<string[]>(new Array(4).fill(""));
 
   return (
     <S.Wrapper>
@@ -48,12 +50,24 @@ const SignUpModal = () => {
               prev[i] = !prev[i];
               setArr(prev);
             }}
-            isChecked={v}
+            isChecked={selectAll || v}
           >
             {textArr[i]}
           </CheckBox>
         ))}
       </S.CheckBoxContainer>
+      {inputArr.map((v, i) => (
+        <Input
+          width={"264px"}
+          placeholder={inputTextArr[i]}
+          value={inputArr[i]}
+          onChange={(e: any) => {
+            const prev = [...inputArr];
+            prev[i] = e.target.value;
+            setInputArr(prev);
+          }}
+        />
+      ))}
     </S.Wrapper>
   );
 };
