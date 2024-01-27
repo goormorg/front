@@ -1,4 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MainPage } from "./pages/Main";
+import { LoginPage } from "./pages/Login";
+import { MyPage } from "./pages/My";
 
 enum PATH {
   login = "/login",
@@ -11,9 +14,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path={PATH.login} element={<div>로그인 페이지</div>}></Route>
-          <Route path={PATH.main} element={<div>메인 페이지</div>}></Route>
-          <Route path={PATH.user} element={<div>마이 페이지</div>}></Route>
+          <Route path={PATH.login} element={<LoginPage />}></Route>
+          <Route path={PATH.main} element={<MainPage />}></Route>
+          <Route path={PATH.user} element={<MyPage />}></Route>
 
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
