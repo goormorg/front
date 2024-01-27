@@ -52,30 +52,12 @@ function RoadmapPage() {
 
   const [menu, setMenu] = useState<string[][]>([[""], [""], [""]]);
 
-  const getAiAnswer = async () => {
-    try {
-      const result = await AIAPI.get({
-        gender: "남자",
-        age: "17세",
-        weight: "60kg",
-        muscle: "40",
-        goal: "살찌우기",
-      });
-
-      const getJson = JSON.parse(result.result);
-
-      setMenu([getJson["아침"], getJson["점심"], getJson["저녁"]]);
-
-      console.log(getJson);
-    } catch (error) {
-      setMenu([["닭가슴살", "계란", "빵"], ["소고기", "흰쌀밥"], ["감자"]]);
-    }
-  };
-
   useEffect(() => {
     //getAiAnswer();
 
-    setMenu([["닭가슴살", "계란", "빵"], ["소고기", "흰쌀밥"], ["감자"]]);
+    const roadmap: any = localStorage.getItem("roadmap");
+
+    setMenu(JSON.parse(roadmap));
   }, []);
 
   return (
@@ -86,6 +68,7 @@ function RoadmapPage() {
             position: "absolute",
             top: "100px",
             left: 0,
+            backgroundColor: "#2FAA3B",
           })}
         >
           <img src={roadmapLine} width="375px" alt="이전" />
@@ -99,7 +82,7 @@ function RoadmapPage() {
         <div
           css={css({
             position: "absolute",
-            top: "1000px",
+            top: "700px",
             paddingBottom: "4rem",
             left: 0,
             display: "flex",
