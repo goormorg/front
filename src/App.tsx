@@ -7,6 +7,7 @@ enum PATH {
   login = "/login",
   main = "/",
   user = "/user",
+  search = "/search",
 }
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path={PATH.login} element={<LoginPage />}></Route>
           <Route path={PATH.main} element={<MainPage />}></Route>
           <Route path={PATH.user} element={<MyPage />}></Route>
+          <Route path={PATH.search} element={<MyPage />}></Route>
 
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
