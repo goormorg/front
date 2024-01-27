@@ -5,6 +5,7 @@ import { Container } from "../components/Container";
 import { Navbar } from "../components/Navbar";
 import { Input } from "../components/Input";
 import { Modal } from "../components/Modal";
+import { Loadmap } from "components";
 
 function MainPage() {
     return (
@@ -22,6 +23,8 @@ function MainPage() {
                 <Modal isOpen={false}>
                     scsc
                 </Modal>
+
+                <Loadmap></Loadmap>
             </div>
         <p>main</p>
 

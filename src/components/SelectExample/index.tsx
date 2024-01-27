@@ -4,12 +4,12 @@ interface Props {
   type: "up" | "down" | "maintain";
 }
 
-const SelectExample: React.FC<Props> = ({ type }) => {
-  const mealsArr = meals.filter((meal) => meal.type.includes(type));
+const SelectExample: React.FC<Props> = ({ type }: any) => {
+  const mealsArr = meals.filter((meal: any) => meal.type.includes(type));
 
   return (
     <div>
-      {mealsArr.map((meal) => (
+      {mealsArr.map((meal: any) => (
         <div>
           <span>{meal.mealName}</span>
           <br />
