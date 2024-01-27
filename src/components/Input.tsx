@@ -19,9 +19,9 @@ function Input({ children, value, onChange, placeholder }: InputType) {
             css={css({
                 border: "none",
                 outline: "none",
-                backgroundColor: "#E8EAEE",
-                borderRadius: "0.6rem",
-                padding: "0.6rem 0.8rem",
+                backgroundColor: "#F1F1F1",
+                borderRadius: "10rem",
+                padding: "0.8rem 1.4rem",
                 width: "100%"
             })}
         ></input>
