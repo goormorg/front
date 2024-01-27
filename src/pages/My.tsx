@@ -330,11 +330,12 @@ const FatInput = styled.input`
   outline: none;
   border: none;
   background: none;
+  text-align: right;
 
   font-size: 48px;
   letter-spacing: -2.88px;
 
-  margin-top: 15px;
+  margin-top: 10px;
   width: 46px;
 `;
 
