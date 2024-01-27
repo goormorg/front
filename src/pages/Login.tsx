@@ -11,7 +11,7 @@ import Prepare from "components/Funnel/Prepare";
 
 function LoginPage() {
   const pages = ["age", "gender", "form", "aim", "loading", "prepare"] as const;
-  const [cur, setCur] = useState(0);
+  const [cur, setCur] = useState(5);
 
   const goNext = () => setCur((cur) => cur + 1);
   const goPrev = () => setCur((cur) => cur - 1);
