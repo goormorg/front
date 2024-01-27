@@ -13,7 +13,6 @@ const CheckBox: React.FC<Props> = ({
   children,
   isChecked,
 }) => {
-  console.log(isDark);
   return (
     <S.Wrapper>
       <S.CheckBox isChecked={isChecked} onClick={onClick}>
