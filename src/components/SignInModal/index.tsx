@@ -34,7 +34,7 @@ const SignInModal = () => {
 
   const handleSignIn = () => {
     if (isValidEmail(email) && pw) {
-      // navigate("/login");
+      login();
     } else {
       alert("모두 입력해주세요");
     }
