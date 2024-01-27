@@ -17,7 +17,6 @@ type LoadmapMenuType = {
   isLeft?: boolean;
 };
 
-
 function Loadmap() {
   const [items, setItems] = useState<LoadmapMenuType[]>([
     {
