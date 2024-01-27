@@ -1,5 +1,3 @@
-/** @jsxImportSource @emotion/react */
-
 import React from "react";
 import { css } from '@emotion/react'
 import { Button } from "../components/Button";
@@ -19,6 +17,5 @@ function MainPage() {
  
         </>
     )
-}
 
-export { MainPage }
+export { MainPage };
