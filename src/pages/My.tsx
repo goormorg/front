@@ -24,7 +24,7 @@ function MyPage() {
     setMyInfo(data[0]);
     setKg(data[0].weight);
     setTall(data[0].height);
-    setMuscle(data[0].skeletalMucle);
+    setMuscle(data[0].skeletalMuscle);
     setFat(data[0].fat);
   };
 
@@ -32,6 +32,26 @@ function MyPage() {
     userEmail = localStorage.getItem("email") ?? "";
     getMyInfo();
   }, []);
+
+  const updateKg = async () => {
+    await axios.put(
+      process.env.REACT_APP_BASE_URL + "/v1/api/user/info-change/weight",
+      {
+        email: userEmail,
+        weight: kg,
+      }
+    );
+  };
+
+  const updateTall = async () => {
+    await axios.put(
+      process.env.REACT_APP_BASE_URL + "/v1/api/user/info-change/height",
+      {
+        email: userEmail,
+        height: tall,
+      }
+    );
+  };
 
   return (
     <Wrapper>
@@ -58,7 +78,11 @@ function MyPage() {
             >
               <path d="M0 1H48" stroke="#999999" stroke-width="0.5" />
             </svg>
-            <UpdateText onClick={() => setIsUpdateKg((prev) => !prev)}>
+            <UpdateText
+              onClick={() =>
+                isUpdateKg ? updateKg() : setIsUpdateKg((prev) => !prev)
+              }
+            >
               {isUpdateKg ? "저장" : "수정"}
             </UpdateText>
           </ModifyTextWrapper>
@@ -85,7 +109,11 @@ function MyPage() {
             >
               <path d="M0 1L68 0.999994" stroke="#D9D9D9" />
             </svg>
-            <UpdateText onClick={() => setIsUpdateTall((prev) => !prev)}>
+            <UpdateText
+              onClick={() =>
+                isUpdateTall ? updateTall() : setIsUpdateTall((prev) => !prev)
+              }
+            >
               {isUpdateTall ? "저장" : "수정"}
             </UpdateText>
           </ModifyTextWrapper>
@@ -104,7 +132,11 @@ function MyPage() {
           <ViewButton>내 목표치 보기</ViewButton>
           <Fat>
             <FatText>체지방량</FatText>
-            <FatInput maxLength={2} />
+            <FatInput
+              value={fat}
+              onChange={(e) => setFat(e.target.value)}
+              maxLength={2}
+            />
             <FatUnit>%</FatUnit>
           </Fat>
         </Box>
