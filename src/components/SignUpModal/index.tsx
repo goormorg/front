@@ -2,6 +2,7 @@ import * as S from "./style";
 
 import { CheckBox, Input } from "components";
 import { useState } from "react";
+import { Button } from "components/Button";
 
 const textArr = [
   "[필수] 개인정보 수집 및 이용동의",
@@ -15,6 +16,14 @@ const SignUpModal = () => {
   const [selectAll, setSelectAll] = useState<boolean>(false);
   const [arr, setArr] = useState<boolean[]>(new Array(3).fill(false));
   const [inputArr, setInputArr] = useState<string[]>(new Array(4).fill(""));
+
+  const handleSignUp = () => {
+    if ((selectAll || !arr.includes(false)) && !inputArr.includes("")) {
+      // 성공 회원가입 로직 작성
+    } else {
+      alert("모두 입력해주세요");
+    }
+  };
 
   return (
     <S.Wrapper>
@@ -56,18 +65,23 @@ const SignUpModal = () => {
           </CheckBox>
         ))}
       </S.CheckBoxContainer>
-      {inputArr.map((v, i) => (
-        <Input
-          width={"264px"}
-          placeholder={inputTextArr[i]}
-          value={inputArr[i]}
-          onChange={(e: any) => {
-            const prev = [...inputArr];
-            prev[i] = e.target.value;
-            setInputArr(prev);
-          }}
-        />
-      ))}
+      <S.InputContainer>
+        {inputArr.map((v, i) => (
+          <Input
+            width={"264px"}
+            placeholder={inputTextArr[i]}
+            value={inputArr[i]}
+            onChange={(e: any) => {
+              const prev = [...inputArr];
+              prev[i] = e.target.value;
+              setInputArr(prev);
+            }}
+          />
+        ))}
+      </S.InputContainer>
+      <Button onClick={handleSignUp} color="green">
+        다음
+      </Button>
     </S.Wrapper>
   );
 };

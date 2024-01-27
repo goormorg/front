@@ -39,3 +39,10 @@ export const Line = styled.div`
   background: #f1f1f1;
   margin: 18px 0;
 `;
+
+export const InputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 36px 0 10px;
+`;
