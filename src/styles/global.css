@@ -1,0 +1,36 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Pretendard";
+}
+.App {
+  background-color: #f1f1f5;
+  display: flex;
+  align: center;
+  justify-content: center;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+p {
+  font-family: "Pretendard";
+  margin: 0;
+}
+button {
+  font-family: "Pretendard";
+}
+input {
+  font-family: "Pretendard";
+}
+input::placeholder {
+  color: #999999;
+}
+
+a {
+  text-decoration: none;
+}
