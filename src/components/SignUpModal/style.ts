@@ -1,11 +1,13 @@
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
-  width: 312px;
-  height: 592px;
+  width: 264px;
+  height: 564px;
   border-radius: 25px;
   background: #fff;
   padding: 22px 24px;
+  position: relative;
+  overflow: hidden;
 `;
 
 export const TitleWrapper = styled.div`
@@ -17,6 +19,7 @@ export const NewSvgWrapper = styled.button`
   cursor: pointer;
   background: none;
   border: none;
+  padding: 0;
 `;
 
 export const Temp = styled.div`

@@ -22,9 +22,9 @@ function Input({ children, value, onChange, placeholder, width }: InputType) {
         outline: "none",
         backgroundColor: "#F1F1F1",
         borderRadius: "10rem",
-        padding: "0.8rem 1.4rem",
+        padding: "12.8px 22.4px",
         width: width,
-        height: "28px",
+        height: "24px",
       })}
     ></input>
   );
