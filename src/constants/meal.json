@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "mealName": "닭가슴살 볶음밥",
+    "mealDescription": "닭가슴살 볶음밥으로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://img-cf.kurly.com/shop/data/goodsview/20220805/gv10000401311_1.jpg",
+    "kcal": 232,
+    "provideBy": "하림"
+  },
+  {
+    "id": 1,
+    "mealName": "삼치 구이",
+    "mealDescription": "삼치구이로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://img.cjthemarket.com/images/file/product/354/20230227090515586.jpg?SF=webp",
+    "kcal": 150,
+    "provideBy": "비비고"
+  },
+  {
+    "id": 2,
+    "mealName": "군고구마",
+    "mealDescription": "군고구마로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://qi-o.qoo10cdn.com/goods_image_big/0/2/7/4/333190274_l.jpg",
+    "kcal": 300,
+    "provideBy": "해남땅고구마"
+  },
+  {
+    "id": 3,
+    "mealName": "치킨 샐러드",
+    "mealDescription": "치킨 샐러드로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://i.namu.wiki/i/_cLeYQStb5Xf8h6vC4ZtRoGFvsF1-rb9wqUMJ9pS510fYeJCGOnh-CQ0A0n9YNHbZ5Roi4WX3NB5RTPdYmhJyg.webp",
+    "kcal": 180,
+    "provideBy": "하림"
+  },
+  {
+    "id": 4,
+    "mealName": "두부 스테이크",
+    "mealDescription": "두부 스테이크로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTJfMTYg/MDAxNjg5MTQ4NTA5MzI3.DSyspWdmh-6-raqS2d4Cs9RCfzt8CWMcJzalXXInoL0g.yKFqd_IewIAPeKaOvj8brwUsVDwyyTXyPQAGS9okBLcg.PNG.ezday1/2.PNG?type=w800",
+    "kcal": 321,
+    "provideBy": "비비고"
+  },
+  {
+    "id": 5,
+    "mealName": "곤약 비빔면",
+    "mealDescription": "곤약 비빔면으로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://recipe1.ezmember.co.kr/cache/recipe/2019/02/21/f808ca2a80c1fa3148ed20fbea72047d1.jpg",
+    "kcal": 300,
+    "provideBy": "비비고"
+  },
+  {
+    "id": 6,
+    "mealName": "샌드위치",
+    "mealDescription": "샌드위치로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://recipe1.ezmember.co.kr/cache/recipe/2021/12/23/8f1022f46829257d51b21cf1d08d72241.jpg",
+    "kcal": 130,
+    "provideBy": "한입만토스트"
+  }
+]
