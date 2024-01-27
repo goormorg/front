@@ -198,8 +198,8 @@ const SmallWrapper = styled.div`
 `;
 
 const Profile = styled.div`
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background-image: url("https://img.freepik.com/free-photo/human-hand-holding-green-leaf-symbolizing-environmentalism-generated-by-ai_188544-27710.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699056000&semt=ais");
   object-fit: contain;
@@ -209,14 +209,14 @@ const UserName = styled.span`
   color: #999;
   font-size: 14px;
   font-weight: 400;
-  letter-spacing: -0.42px;
+  letter-spacing: -0.28px;
 `;
 
 const UserPlan = styled.span`
   color: #141414;
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: -0.42px;
+  letter-spacing: -0.28px;
 `;
 
 const AddButton = styled.button`
