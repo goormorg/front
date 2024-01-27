@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Intro, MainPage, LoginPage, MyPage, SearchPage } from "pages";
 
+import { SelectExample } from "components";
+
 enum PATH {
   login = "/login",
   main = "/",
@@ -21,6 +23,10 @@ function App() {
           <Route path={PATH.user} element={<MyPage />}></Route>
           <Route path={PATH.search} element={<SearchPage />}></Route>
           <Route path={PATH.intro} element={<Intro />}></Route>
+          <Route
+            path={PATH.test}
+            element={<SelectExample type="maintain" />}
+          ></Route>
 
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
