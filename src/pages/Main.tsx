@@ -1,14 +1,12 @@
-/** @jsxImportSource @emotion/react */
-
 import React from "react";
-import { css } from '@emotion/react'
+import { css } from "@emotion/react";
 
 function MainPage() {
-    return (
-        <>
-        <p>main</p>
-        </>
-    )
+  return (
+    <>
+      <p>main</p>
+    </>
+  );
 }
 
-export { MainPage }
+export { MainPage };
