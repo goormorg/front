@@ -39,12 +39,12 @@ const Form = ({ goPrev, goNext }: FormProps) => {
       <S.Extra color="#42BD4E">추가적인 입력이 가능해요</S.Extra>
       <S.Input
         placeholder="몸무게*"
-        value={weight}
+        value={weight || ""}
         onChange={(e) => setWeight(parseInt(e.currentTarget.value))}
       />
       <S.Input
         placeholder="키*"
-        value={height}
+        value={height || ""}
         onChange={(e) => setHeight(parseInt(e.currentTarget.value))}
       />
       <S.Text onClick={handleVisible}>
@@ -53,12 +53,12 @@ const Form = ({ goPrev, goNext }: FormProps) => {
       <S.InputBox ref={inputRef}>
         <S.Input
           placeholder="체지방률"
-          value={fat}
+          value={fat || ""}
           onChange={(e) => setFat(parseInt(e.currentTarget.value))}
         />
         <S.Input
           placeholder="골격근량"
-          value={skeletalMuscle}
+          value={skeletalMuscle || ""}
           onChange={(e) => setSkeletalMuscle(parseInt(e.currentTarget.value))}
         />
       </S.InputBox>
