@@ -4,15 +4,19 @@ import { Button } from "components/Button";
 
 import { useRef } from "react";
 
-import { SignUpModal } from "components";
+import { SignUpModal, SignInModal } from "components";
 
 const Intro = () => {
-  const dialog = useRef<HTMLDialogElement>(null);
+  const signInDialog = useRef<HTMLDialogElement>(null);
+  const signUpDialog = useRef<HTMLDialogElement>(null);
 
   return (
     <S.Wrapper>
-      <S.ModalWrapper ref={dialog}>
+      <S.ModalWrapper ref={signUpDialog}>
         <SignUpModal />
+      </S.ModalWrapper>
+      <S.ModalWrapper ref={signInDialog}>
+        <SignInModal />
       </S.ModalWrapper>
       <S.Title>
         나에게 딱 맞는
@@ -21,10 +25,10 @@ const Intro = () => {
       </S.Title>
       <S.Text>what’s up healthup</S.Text>
       <S.ButtonWrapper>
-        <Button onClick={() => alert("test")} color="grey">
+        <Button onClick={() => signInDialog.current?.showModal()} color="grey">
           로그인
         </Button>
-        <Button onClick={() => dialog.current?.showModal()} color="green">
+        <Button onClick={() => signUpDialog.current?.showModal()} color="green">
           회원가입
         </Button>
       </S.ButtonWrapper>
