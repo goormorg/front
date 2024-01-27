@@ -2,19 +2,24 @@ import React from "react";
 import { css } from "@emotion/react";
 
 import { useState } from "react";
+import Age from "components/Funnel/Age";
+import Gender from "components/Funnel/Gender";
+import Form from "components/Funnel/Form";
+import Aim from "components/Funnel/Aim";
 
 function LoginPage() {
-  type pages = "age" | "gender" | "form" | "ex";
-  const [cur, setCur] = useState<pages>("age");
+  const pages = ["age", "gender", "form", "aim"] as const;
+  const [cur, setCur] = useState(0);
+
+  const goNext = () => setCur(cur + 1);
+  const goPrev = () => setCur(cur - 1);
 
   return (
     <>
-      {cur === "ex" && (
-        <div /*goNext={() => setCur("age")}*/>예시 사용 방법</div>
-      )}
-      {cur === "age" && <div>나이 정보 페이지</div>}
-      {cur === "gender" && <div>성별 정보 페이지</div>}
-      {cur === "form" && <div>체형 정보 페이지</div>}
+      {pages[cur] === "age" && <Age goNext={goNext} goPrev={goPrev}/>}
+      {pages[cur] === "gender" && <Gender goNext={goNext} goPrev={goPrev}/>}
+      {pages[cur] === "form" && <Form goNext={goNext} goPrev={goPrev}/>}
+      {pages[cur] === "aim" && <Aim goPrev={goPrev}/>}
     </>
   );
 }
