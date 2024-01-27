@@ -7,7 +7,7 @@ type ButtonType = {
     children?: any
     onClick?: any
     disable?: boolean
-    color?: "light" | "blue" | "white"
+    color?: "light" | "blue" | "white" | "green"
 
 }
 
@@ -23,12 +23,18 @@ function Button({ children, onClick, disable, color = 'light' }: ButtonType) {
             "color": "#FBFBFD",
             "hoverBackgroundColor": "#205ed6"
         },
+        "green": {
+            "backgroundColor": "#42BD4E",
+            "color": "#ffffff",
+            "hoverBackgroundColor": "#3aab45"
+        },
         "white": {
             "backgroundColor": "#ffffff",
             "color": "#000000",
             "hoverBackgroundColor": "#ffffff"
         },
     }
+    
 
     return (
         <button onClick={onClick} disabled={disable} css={css({ 
@@ -36,9 +42,10 @@ function Button({ children, onClick, disable, color = 'light' }: ButtonType) {
             outline: "none",
             border: "none",
             padding: "0.8rem 1.4rem",
-            borderRadius: "0.6rem",
+            borderRadius: "10rem",
             backgroundColor: buttonColor[color].backgroundColor,
             color: buttonColor[color].color,
+            cursor: "pointer",
             transition: "0.1s",
             ":hover": {
                 backgroundColor: buttonColor[color].hoverBackgroundColor,
