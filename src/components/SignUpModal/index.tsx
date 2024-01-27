@@ -3,6 +3,9 @@ import * as S from "./style";
 import { CheckBox, Input } from "components";
 import { useState } from "react";
 import { Button } from "components/Button";
+import { useAtom } from "jotai";
+import formAtom from "contexts/formAtom";
+import { useNavigate } from "react-router-dom";
 
 const textArr = [
   "[필수] 개인정보 수집 및 이용동의",
@@ -16,6 +19,9 @@ const SignUpModal = () => {
   const [selectAll, setSelectAll] = useState<boolean>(false);
   const [arr, setArr] = useState<boolean[]>(new Array(3).fill(false));
   const [inputArr, setInputArr] = useState<string[]>(new Array(4).fill(""));
+
+  const [formUserData, setFormUserData] = useAtom(formAtom);
+  const navigate = useNavigate();
 
   function isValidEmail(email: string): boolean {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -34,7 +40,14 @@ const SignUpModal = () => {
       isValidEmail(inputArr[1]) &&
       isValidTelNum(inputArr[2])
     ) {
-      // 성공 회원가입 로직 작성
+      setFormUserData({
+        ...formUserData,
+        name: inputArr[0],
+        email: inputArr[1],
+        phoneNumber: inputArr[2],
+        password: inputArr[3],
+      });
+      navigate("/login");
     } else {
       alert("모두 입력해주세요");
     }
@@ -89,6 +102,7 @@ const SignUpModal = () => {
         {inputArr.map((v, i) => (
           <Input
             key={i}
+            type={inputTextArr[i] === "비밀번호" && "password"}
             width={"219px"}
             placeholder={inputTextArr[i]}
             value={inputArr[i]}
