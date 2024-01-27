@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import React from "react";
-import { css } from '@emotion/react'
+import { css } from "@emotion/react";
 import { Button } from "../components/Button";
 import { Container } from "../components/Container";
 import { Navbar } from "../components/Navbar";
@@ -27,6 +27,7 @@ function MainPage() {
  
         </>
     )
+
 }
 
 export { MainPage };

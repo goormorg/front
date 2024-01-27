@@ -8,7 +8,7 @@ html {
 }
 .App {
   display: flex;
-  align: center;
+  align-items: center;
   justify-content: center;
 }
 code {
