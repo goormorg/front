@@ -3,32 +3,39 @@ import backArrow from "assets/backArrow.svg";
 import * as S from "./style";
 import { useAtom } from "jotai";
 import formAtom from "contexts/formAtom";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 interface AimProps {
   goPrev: () => void;
+  goNext: () => void;
 }
 
-const Aim = ({ goPrev }: AimProps) => {
+const Aim = ({ goPrev, goNext }: AimProps) => {
   const [formUserData, setFormUserData] = useAtom(formAtom);
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
-    await axios.post(
-      process.env.REACT_APP_BASE_URL + "/v1/api/auth/signUp",
-      formUserData
-    );
-    const { data } = await axios.post(
-      process.env.REACT_APP_BASE_URL + "/v1/api/auth/signIn",
-      {
-        email: formUserData.email,
-        password: formUserData.password,
-      }
-    );
-    localStorage.setItem("token", data.token);
-    localStorage.setItem("email", formUserData.email);
-    navigate("/");
+    try {
+      goNext();
+      await axios.post(
+        process.env.REACT_APP_BASE_URL + "/v1/api/auth/signUp",
+        formUserData,
+      );
+      const { data } = await axios.post(
+        process.env.REACT_APP_BASE_URL + "/v1/api/auth/signIn",
+        {
+          email: formUserData.email,
+          password: formUserData.password,
+        },
+      );
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("email", formUserData.email);
+      goNext();
+    } catch {
+      alert("회원가입에 실패하였습니다!");
+      navigate("/intro");
+    }
   };
 
   useEffect(() => {
