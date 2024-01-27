@@ -21,7 +21,8 @@ function Input({ children, value, onChange, placeholder }: InputType) {
                 outline: "none",
                 backgroundColor: "#E8EAEE",
                 borderRadius: "0.6rem",
-                padding: "0.6rem 0.8rem"
+                padding: "0.6rem 0.8rem",
+                width: "100%"
             })}
         ></input>
     )
