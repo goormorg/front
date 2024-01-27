@@ -13,6 +13,12 @@ export const TitleWrapper = styled.div`
   justify-content: space-between;
 `;
 
+export const NewSvgWrapper = styled.button`
+  cursor: pointer;
+  background: none;
+  border: none;
+`;
+
 export const Temp = styled.div`
   margin-top: 73px;
 `;
