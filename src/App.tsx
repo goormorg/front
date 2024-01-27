@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Intro, MainPage, LoginPage, MyPage, SearchPage } from "pages";
 
 import { SelectExample } from "components";
+import { RoadmapPage } from "pages/Roadmap";
 
 enum PATH {
   login = "/login",
@@ -11,6 +12,8 @@ enum PATH {
   search = "/search",
   intro = "/intro",
   test = "/test",
+  roadmap = "/roadmap",
+
 }
 
 function App() {
@@ -23,6 +26,9 @@ function App() {
           <Route path={PATH.user} element={<MyPage />}></Route>
           <Route path={PATH.search} element={<SearchPage />}></Route>
           <Route path={PATH.intro} element={<Intro />}></Route>
+          <Route path={PATH.roadmap} element={<RoadmapPage />}></Route>
+
+          
           <Route
             path={PATH.test}
             element={<SelectExample type="maintain" />}
