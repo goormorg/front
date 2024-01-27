@@ -50,7 +50,7 @@ function RoadmapPage() {
     },
   ]);
 
-  const [menu, setMenu] = useState<string[][]>([[]]);
+  const [menu, setMenu] = useState<string[][]>([[""], [""], [""]]);
 
   const getAiAnswer = async () => {
     try {
@@ -74,6 +74,8 @@ function RoadmapPage() {
 
   useEffect(() => {
     //getAiAnswer();
+
+    setMenu([["닭가슴살", "계란", "빵"], ["소고기", "흰쌀밥"], ["감자"]]);
   }, []);
 
   return (
@@ -114,9 +116,9 @@ function RoadmapPage() {
               width: "100%",
             })}
           >
-            <p>아침: {menu[0]}</p>
-            <p>점심: {menu[1]}</p>
-            <p>저녁: {menu[2]}</p>
+            <p>아침: {menu[0].join(",")}</p>
+            <p>점심: {menu[1].join(",")}</p>
+            <p>저녁: {menu[2].join(",")}</p>
           </div>
         </div>
       </Container>
