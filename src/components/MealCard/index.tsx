@@ -40,7 +40,9 @@ const MealCard = ({ mock }: MealCard) => (
       <S.Description>열량 {mock.nutrition.kcal}</S.Description>
       <S.DetailWrapper>
         <S.Detail>하루 대사량의</S.Detail>
-        <S.Description>15%</S.Description>
+        <S.Description>
+          {Math.round((Number(mock.nutrition.kcal) / 2100) * 100)}%
+        </S.Description>
       </S.DetailWrapper>
     </S.DesWrapper>
     <S.Contents>
@@ -48,49 +50,63 @@ const MealCard = ({ mock }: MealCard) => (
         <S.Description>탄수화물 {mock.nutrition.carbohydrate}</S.Description>
         <S.DetailWrapper>
           <S.Detail>기초 영상소 하루치의</S.Detail>
-          <S.Description>15%</S.Description>
+          <S.Description>
+            {Math.round((Number(mock.nutrition.carbohydrate) / 130) * 100)}%
+          </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
       <S.DesWrapper>
         <S.Description>당류 {mock.nutrition.sugars}</S.Description>
         <S.DetailWrapper>
           <S.Detail>=</S.Detail>
-          <S.Description>15%</S.Description>
+          <S.Description>
+            {Math.round((Number(mock.nutrition.sugars) / 100) * 100)}%
+          </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
       <S.DesWrapper>
         <S.Description>지방 {mock.nutrition.province}</S.Description>
         <S.DetailWrapper>
           <S.Detail>=</S.Detail>
-          <S.Description>15%</S.Description>
+          <S.Description>
+            {Math.round((Number(mock.nutrition.province) / 50) * 100)}%
+          </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
       <S.DesWrapper>
         <S.Description>단백질 {mock.nutrition.protein}</S.Description>
         <S.DetailWrapper>
           <S.Detail>=</S.Detail>
-          <S.Description>15%</S.Description>
+          <S.Description>
+            {Math.round((Number(mock.nutrition.protein) / 55) * 100)}%
+          </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
       <S.DesWrapper>
         <S.Description>포화지방 {mock.nutrition.saturatedFat}</S.Description>
         <S.DetailWrapper>
           <S.Detail>=</S.Detail>
-          <S.Description>15%</S.Description>
+          <S.Description>
+            {Math.round((Number(mock.nutrition.saturatedFat) / 15) * 100)}%
+          </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
       <S.DesWrapper>
         <S.Description>나트륨 {mock.nutrition.salt}</S.Description>
         <S.DetailWrapper>
           <S.Detail>=</S.Detail>
-          <S.Description>15%</S.Description>
+          <S.Description>
+            {Math.round((Number(mock.nutrition.salt) / 2000) * 100)}%
+          </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
       <S.DesWrapper>
         <S.Description>칼슘 {mock.nutrition.calcium}</S.Description>
         <S.DetailWrapper>
           <S.Detail>=</S.Detail>
-          <S.Description>15%</S.Description>
+          <S.Description>
+            {Math.round((Number(mock.nutrition.calcium) / 700) * 100)}%
+          </S.Description>
         </S.DetailWrapper>
       </S.DesWrapper>
     </S.Contents>
