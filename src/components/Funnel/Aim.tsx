@@ -3,14 +3,15 @@ import backArrow from "assets/backArrow.svg";
 import * as S from "./style";
 import { useAtom } from "jotai";
 import formAtom from "contexts/formAtom";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 interface AimProps {
   goPrev: () => void;
+  goNext: () => void;
 }
 
-const Aim = ({ goPrev }: AimProps) => {
+const Aim = ({ goPrev, goNext }: AimProps) => {
   const [formUserData, setFormUserData] = useAtom(formAtom);
   const navigate = useNavigate();
 
@@ -29,6 +30,7 @@ const Aim = ({ goPrev }: AimProps) => {
     localStorage.setItem("token", data.token);
     localStorage.setItem("email", formUserData.email);
     navigate("/getroadmap");
+
   };
 
   useEffect(() => {
