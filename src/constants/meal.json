@@ -6,7 +6,8 @@
     "mealImageUrl": "https://img-cf.kurly.com/shop/data/goodsview/20220805/gv10000401311_1.jpg",
     "kcal": 232,
     "provideBy": "하림",
-    "type": "up,down,maintain"
+    "type": "up,down,maintain",
+    "time": "morning"
   },
   {
     "id": 1,
@@ -15,7 +16,8 @@
     "mealImageUrl": "https://img.cjthemarket.com/images/file/product/354/20230227090515586.jpg?SF=webp",
     "kcal": 150,
     "provideBy": "비비고",
-    "type": "up,down,maintain"
+    "type": "up,down,maintain",
+    "time": "lunch"
   },
   {
     "id": 2,
@@ -24,7 +26,8 @@
     "mealImageUrl": "https://qi-o.qoo10cdn.com/goods_image_big/0/2/7/4/333190274_l.jpg",
     "kcal": 300,
     "provideBy": "해남땅고구마",
-    "type": "up,maintain"
+    "type": "up,maintain",
+    "time": "snack"
   },
   {
     "id": 3,
@@ -33,7 +36,8 @@
     "mealImageUrl": "https://i.namu.wiki/i/_cLeYQStb5Xf8h6vC4ZtRoGFvsF1-rb9wqUMJ9pS510fYeJCGOnh-CQ0A0n9YNHbZ5Roi4WX3NB5RTPdYmhJyg.webp",
     "kcal": 180,
     "provideBy": "하림",
-    "type": "down,maintain"
+    "type": "down,maintain",
+    "time": "morning"
   },
   {
     "id": 4,
@@ -42,7 +46,8 @@
     "mealImageUrl": "https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTJfMTYg/MDAxNjg5MTQ4NTA5MzI3.DSyspWdmh-6-raqS2d4Cs9RCfzt8CWMcJzalXXInoL0g.yKFqd_IewIAPeKaOvj8brwUsVDwyyTXyPQAGS9okBLcg.PNG.ezday1/2.PNG?type=w800",
     "kcal": 321,
     "provideBy": "비비고",
-    "type": "down"
+    "type": "down",
+    "time": "lunch"
   },
   {
     "id": 5,
@@ -51,7 +56,8 @@
     "mealImageUrl": "https://recipe1.ezmember.co.kr/cache/recipe/2019/02/21/f808ca2a80c1fa3148ed20fbea72047d1.jpg",
     "kcal": 300,
     "provideBy": "비비고",
-    "type": "down"
+    "type": "down",
+    "time": "lunch"
   },
   {
     "id": 6,
@@ -60,7 +66,8 @@
     "mealImageUrl": "https://recipe1.ezmember.co.kr/cache/recipe/2021/12/23/8f1022f46829257d51b21cf1d08d72241.jpg",
     "kcal": 130,
     "provideBy": "한입만토스트",
-    "type": "up,maintain"
+    "type": "up,maintain",
+    "time": "snack"
   },
   {
     "id": 7,
@@ -69,7 +76,8 @@
     "mealImageUrl": "https://health.chosun.com/site/data/img_dir/2023/07/14/2023071401917_0.jpg",
     "kcal": 200,
     "provideBy": "태국",
-    "type": "maintain"
+    "type": "maintain",
+    "time": "snack"
   },
   {
     "id": 8,
@@ -78,7 +86,8 @@
     "mealImageUrl": "https://i.namu.wiki/i/j9nHHoKNMs_NRsXR5rDxKfwg-lNL8f-bcpLPxfmotdqeTXpeCEscwfyPmgX_X4WvCJmpGVGPZxrbVaAEuZLVOw.webp",
     "kcal": 500,
     "provideBy": "빙그레",
-    "type": "up"
+    "type": "up",
+    "time": "snack"
   },
   {
     "id": 9,
@@ -87,6 +96,277 @@
     "mealImageUrl": "https://img.siksinhot.com/place/1472579187665420.jpg",
     "kcal": 320,
     "provideBy": "건강축산",
-    "type": "up"
+    "type": "up",
+    "time": "dinner"
+  },
+  {
+    "id": 10,
+    "mealName": "죽",
+    "mealDescription": "죽으로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://dl8439a2el04c.cloudfront.net/spark/product/2589_%EB%8B%AD%EA%B3%A0%EA%B8%B0%EC%95%BC%EC%B1%84%EC%A3%BD/100_0_2589_%EB%8B%AD%EA%B3%A0%EA%B8%B0%EC%95%BC%EC%B1%84%EC%A3%BD.webp",
+    "kcal": 140,
+    "provideBy": "건강축산",
+    "type": "up",
+    "time": "morning"
+  },
+  {
+    "id": 11,
+    "mealName": "피자, 핫도그",
+    "mealDescription": "피자와 핫도그로 체중을 늘리는 식단을 구성해보세요.",
+    "mealImageUrl": "https://www.7thpizza.com/files/MENU/3089531DA5DB4CBCB0E476C7CFDDCAE0.jpg",
+    "kcal": 534,
+    "provideBy": "7번가피자",
+    "type": "up",
+    "time": "lunch"
+  },
+  {
+    "id": 12,
+    "mealName": "도시락, 요거트, 닭가슴살",
+    "mealDescription": "도시락, 요거트, 닭가슴살로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://post-phinf.pstatic.net/MjAxOTA4MjZfMTEz/MDAxNTY2ODAxMjA1NjI4.GhLxRTluW-OP2OK0Y7PUThbFaoSH_GnPelJlX04FJNwg.RlZT8rlItQSJUxS5IcSVH1hL2jMSLfHtCfVsWbNansYg.PNG/image.png?type=w800_q75",
+    "kcal": 672,
+    "provideBy": "비요뜨",
+    "type": "up",
+    "time": "dinner"
+  },
+  {
+    "id": 13,
+    "mealName": "샌드위치, 스테이크",
+    "mealDescription": "샌드위치, 스테이크로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://img.insight.co.kr/static/2021/08/01/700/img_20210801162320_xo3195wd.webp",
+    "kcal": 582,
+    "provideBy": "건강축산",
+    "type": "up",
+    "time": "dinner"
+  },
+  {
+    "id": 14,
+    "mealName": "샐러드",
+    "mealDescription": "샐러드로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://i.namu.wiki/i/_cLeYQStb5Xf8h6vC4ZtRoGFvsF1-rb9wqUMJ9pS510fYeJCGOnh-CQ0A0n9YNHbZ5Roi4WX3NB5RTPdYmhJyg.webp",
+    "kcal": 22,
+    "provideBy": "anon",
+    "type": "up",
+    "time": "morning"
+  },
+  {
+    "id": 15,
+    "mealName": "닭가슴살, 죽",
+    "mealDescription": "닭가슴살, 죽으로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://mblogthumb-phinf.pstatic.net/MjAyMjA2MjFfMTIy/MDAxNjU1Nzg4ODg1MTMw.egi2JbFSmvMcvEczp9hbQj6-58KE6o50rRoV8ADEDR8g.Zdoe33K9lzbsONzNJW73K9mBpB2fJzadqXjj13qsGTMg.JPEG.elarpi/2022%EF%BC%BF0619%EF%BC%BF12551600.jpg?type=w800",
+    "kcal": 429,
+    "provideBy": "하림",
+    "type": "down",
+    "time": "lunch"
+  },
+  {
+    "id": 16,
+    "mealName": "피자, 요거트, 볼",
+    "mealDescription": "피자와 미트볼로 건강한 식단도 좋지만 오늘은 맛있게 구성해보세요.",
+    "mealImageUrl": "https://www.smlounge.co.kr/old_data/mlounge/contents/data/article/142232611322198.jpg",
+    "kcal": 650,
+    "provideBy": "건강축산",
+    "type": "down",
+    "time": "dinner"
+  },
+  {
+    "id": 17,
+    "mealName": "도시락, 스테이크",
+    "mealDescription": "도시락, 스테이크로 건강한 식단을 구성해보세요. 맛있을거에요",
+    "mealImageUrl": "https://menu.moneys.co.kr/moneyweek/thumb/2019/09/02/06/2019090216308057308_1.jpg",
+    "kcal": 540,
+    "provideBy": "비비고",
+    "type": "down",
+    "time": "lunch"
+  },
+  {
+    "id": 18,
+    "mealName": "볶음밥, 쉐이크, 닭가슴살",
+    "mealDescription": "볶음밥, 쉐이크, 닭가슴살로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://mblogthumb-phinf.pstatic.net/MjAxODA1MDdfMTUw/MDAxNTI1Njk2ODc1NTAz.6shA0jZbKzm2Ei0QwpztNoSR8zEue7Z9IxgE7udIPg8g.5RAQk6HaLuu98oNhwSRXwiTwHHgeUKaW0IxYbiBIWpEg.JPEG.sinsils/IMG_2365.JPG?type=w800",
+    "kcal": 717,
+    "provideBy": "밀키트",
+    "type": "down",
+    "time": "lunch"
+  },
+  {
+    "id": 19,
+    "mealName": "닭가슴살, 피자",
+    "mealDescription": "닭가슴살, 피자로 치팅데이 어떨까요?",
+    "mealImageUrl": "https://mblogthumb-phinf.pstatic.net/MjAyMDA3MjNfODEg/MDAxNTk1NTEyNjkyNDEz.5L3lVSvNeGaWIVBhjb72jue0AIppPN6_flddckaQH3sg.NPJyMLSNxr3tGda9R8wCF-V38GfHzMd6P2Oun7kH7C0g.JPEG.bbbmini/%ED%94%BC%EC%9E%902.jpg?type=w800",
+    "kcal": 555,
+    "provideBy": "피자헛",
+    "type": "down",
+    "time": "dinner"
+  },
+  {
+    "id": 20,
+    "mealName": "샐러드",
+    "mealDescription": "샐러드로 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://health.chosun.com/site/data/img_dir/2021/05/06/2021050601029_0.jpg",
+    "kcal": 7,
+    "provideBy": "신선식품",
+    "type": "down",
+    "time": "lunch"
+  },
+  {
+    "id": 21,
+    "mealName": "도시락, 닭가슴살, 우유",
+    "mealDescription": "도시락, 닭가슴살, 우유로 알찬 식단을 구성해보세요.",
+    "mealImageUrl": "https://mblogthumb-phinf.pstatic.net/MjAxODEwMjBfMjgy/MDAxNTM5OTY3NjcwODE4.H1P3K5F6iDxwSeM6ieoYRz65Yp33OxCBvu6ptRIA2Ewg.Hkaj-4vIuOvNplJO7wIwKucYSL78qIYu71tP0oibMeYg.JPEG.ppo1127/IMG_5453.JPG?type=w800",
+    "kcal": 540,
+    "provideBy": "신선식품",
+    "type": "down",
+    "time": "morning"
+  },
+  {
+    "id": 22,
+    "mealName": "생선회",
+    "mealDescription": "생선회로 오늘은 고품격 식단 어떨까요.",
+    "mealImageUrl": "https://img-cf.kurly.com/shop/data/goodsview/20230407/gv40000668955_1.jpg",
+    "kcal": 220,
+    "provideBy": "건강수산",
+    "type": "down",
+    "time": "dinner"
+  },
+  {
+    "id": 23,
+    "mealName": "도시락, 낫또, 두유",
+    "mealDescription": "도시락, 낫또, 두유로 담백하면서도 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://i.namu.wiki/i/RioP1sp4HB6jFV6mqDKrM8X-Pfy3Y7wNbrlT2Ha0vdcaf0uEw6ouMWL-Q0WZzlOVfBnFWmd0R9jyHT7unStldA.webp",
+    "kcal": 785,
+    "provideBy": "일본",
+    "type": "down",
+    "time": "lunch"
+  },
+  {
+    "id": 24,
+    "mealName": "쌀국수",
+    "mealDescription": "쌀국수로 건강한 베트남같은 식단을 구성해보세요.",
+    "mealImageUrl": "https://www.costco.co.kr/medias/sys_master/images/h21/hff/135176542158878.jpg",
+    "kcal": 120,
+    "provideBy": "베트남",
+    "type": "down",
+    "time": "dinner"
+  },
+  {
+    "id": 25,
+    "mealName": "치즈샐러드, 닭가슴살",
+    "mealDescription": "치즈샐러드, 닭가슴살로 오늘은 고품격 식단 어떨까요.",
+    "mealImageUrl": "https://recipe1.ezmember.co.kr/cache/recipe/2015/10/04/1830a313d3f0387c69e0acff888cec3d1.jpg",
+    "kcal": 440,
+    "provideBy": "산양목장",
+    "type": "up",
+    "time": "lunch"
+  },
+  {
+    "id": 26,
+    "mealName": "볶음밥, 핫도그",
+    "mealDescription": "볶음밥, 핫도그로 담백하면서도 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://recipe1.ezmember.co.kr/cache/recipe/2021/12/24/62c543074ff14293b98273a8c6cd55461.jpg",
+    "kcal": 659,
+    "provideBy": "멕시코",
+    "type": "up",
+    "time": "dinner"
+  },
+  {
+    "id": 27,
+    "mealName": "샌드위치, 닭가슴살, 두유",
+    "mealDescription": "샌드위치, 닭가슴살, 두유로 식단을 구성해보세요.",
+    "mealImageUrl": "https://src.hidoc.co.kr/image/lib/2021/1/29/1611904821748_0.jpg",
+    "kcal": 643,
+    "provideBy": "산림방아",
+    "type": "up",
+    "time": "morning"
+  },
+  {
+    "id": 28,
+    "mealName": "오리샐러드, 닭가슴살",
+    "mealDescription": "오리샐러드, 닭가슴살로 오늘은 고품격 식단 어떨까요.",
+    "mealImageUrl": "https://recipe1.ezmember.co.kr/cache/recipe/2019/11/12/ba3544bd13d23d2ab05158de81dcf99a1.jpg",
+    "kcal": 520,
+    "provideBy": "하림",
+    "type": "up",
+    "time": "morning"
+  },
+  {
+    "id": 29,
+    "mealName": "육류샐러드, 두유, 닭가슴살",
+    "mealDescription": "육류샐러드, 두유, 닭가슴살로 담백하면서도 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://recipe1.ezmember.co.kr/cache/recipe/2019/11/13/09bb81e38482cbbf3dd0999485c169321.jpg",
+    "kcal": 640,
+    "provideBy": "청정상회",
+    "type": "up",
+    "time": "dinner"
+  },
+  {
+    "id": 30,
+    "mealName": "육류샐러드",
+    "mealDescription": "육류샐러드로 건강한 베트남같은 식단을 구성해보세요.",
+    "mealImageUrl": "https://recipe1.ezmember.co.kr/cache/recipe/2017/05/23/179061c9750b45e0edca8075a9af53051.jpg",
+    "kcal": 344,
+    "provideBy": "청정상회",
+    "type": "up",
+    "time": "morning"
+  },
+  {
+    "id": 31,
+    "mealName": "피자, 요구르트, 닭가슴살",
+    "mealDescription": "피자, 요구르트, 닭가슴살로 오늘은 고품격 식단 어떨까요.",
+    "mealImageUrl": "https://qi-o.qoo10cdn.com/goods_image_big/5/4/7/2/9946395472_l.jpg",
+    "kcal": 617,
+    "provideBy": "산야목장",
+    "type": "maintain",
+    "time": "lunch"
+  },
+  {
+    "id": 31,
+    "mealName": "두부면, 닭가슴살",
+    "mealDescription": "두부면, 닭가슴살로 담백하면서도 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://recipe1.ezmember.co.kr/cache/recipe/2023/05/08/9e6ae0869aea8e9e2101dcb6f8cb20851.jpg",
+    "kcal": 660,
+    "provideBy": "콩방앗간",
+    "type": "maintain",
+    "time": "lunch"
+  },
+  {
+    "id": 32,
+    "mealName": "샌드위치, 스테이크",
+    "mealDescription": "샌드위치, 스테이크로 식단을 구성해보세요.",
+    "mealImageUrl": "https://www.homecuisine.co.kr/files/attach/images/1462/099/009/a1749c70a6775ec7633e761a16144942.JPG",
+    "kcal": 518,
+    "provideBy": "인절미토스트",
+    "type": "maintain",
+    "time": "dinner"
+  },
+  {
+    "id": 33,
+    "mealName": "도시락, 낫또, 요거트",
+    "mealDescription": "도시락, 낫또, 요거트로 오늘은 고품격 식단이면서 무리한 식단 어떨까요.",
+    "mealImageUrl": "https://mblogthumb-phinf.pstatic.net/MjAxNzExMDJfMjAy/MDAxNTA5NjI0ODkyNjkw.e2kMechz25GHVzhi1Y9tC9SZTLb1gZPOXh9YHBaRSe8g.lPTYnXIZbDKFKIHczlx3DUiSZbaPoyK8aHpTcEGYSXAg.JPEG.moo4114/image_7618060321509616731536.jpg?type=w800",
+    "kcal": 923,
+    "provideBy": "하림",
+    "type": "maintain",
+    "time": "morning"
+  },
+  {
+    "id": 34,
+    "mealName": "만두",
+    "mealDescription": "만두로 담백하면서도 건강한 식단을 구성해보세요.",
+    "mealImageUrl": "https://love.seoul.go.kr/tmda/Pds/Board/seoul_news_write/article_202001_05_1200.jpg",
+    "kcal": 790,
+    "provideBy": "만두공방",
+    "type": "maintain",
+    "time": "snack"
+  },
+  {
+    "id": 35,
+    "mealName": "육류샐러드",
+    "mealDescription": "육류샐러드로 건강한 베트남같은 식단을 구성해보세요.",
+    "mealImageUrl": "https://png.pngtree.com/background/20230225/original/pngtree-salad-with-meat-picture-image_2057306.jpg",
+    "kcal": 344,
+    "provideBy": "청정상회",
+    "type": "maintain",
+    "time": "dinner"
   }
 ]
