@@ -27,7 +27,6 @@ function App() {
 
   return (
     <div className="App">
-      <img alt="테스트" src={state} />
       <BrowserRouter>
         <Routes>
           <Route path={PATH.login} element={<LoginPage />}></Route>
