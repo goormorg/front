@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { useAtom } from "jotai";
+import formAtom from "contexts/formAtom";
 import * as S from "./style";
 import backArrow from "assets/backArrow.svg";
 
@@ -8,6 +10,7 @@ interface GenderProps {
 }
 
 const Gender = ({ goNext, goPrev }: GenderProps) => {
+  const [formUserData, setFormUserData] = useAtom(formAtom);
   return (
     <S.Layout>
       <img src={backArrow} onClick={goPrev} width="14px" alt="이전" />
@@ -16,8 +19,22 @@ const Gender = ({ goNext, goPrev }: GenderProps) => {
         <br />
         입력해주세요
       </h2>
-      <S.Button type="button" onClick={goNext} value="여자" />
-      <S.Button type="button" onClick={goNext} value="남자" />
+      <S.Button
+        type="button"
+        onClick={() => {
+          setFormUserData({ ...formUserData, gender: "FEMALE" });
+          goNext();
+        }}
+        value="여자"
+      />
+      <S.Button
+        type="button"
+        onClick={() => {
+          setFormUserData({ ...formUserData, gender: "MALE" });
+          goNext();
+        }}
+        value="남자"
+      />
     </S.Layout>
   );
 };

@@ -8,15 +8,24 @@ type InputType = {
   value?: any;
   onChange?: any;
   placeholder?: any;
+  type?: any;
   width: string;
 };
 
-function Input({ children, value, onChange, placeholder, width }: InputType) {
+function Input({
+  children,
+  type,
+  value,
+  onChange,
+  placeholder,
+  width,
+}: InputType) {
   return (
     <input
       value={value}
       onChange={onChange}
       placeholder={placeholder}
+      type={type}
       css={css({
         border: "none",
         outline: "none",
