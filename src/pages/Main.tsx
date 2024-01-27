@@ -8,8 +8,19 @@ import { Navbar } from "../components/Navbar";
 import { Input } from "../components/Input";
 import { Modal } from "../components/Modal";
 import { Loadmap } from "components";
+import { AIAPI } from "api";
 
 function MainPage() {
+    const getAiAnswer = async () => {
+        const result = await AIAPI.get({
+            gender: '남자',
+            age: '17세',
+            weight: '60kg',
+            muscle: '40',
+            goal: '살찌우기'
+        })
+    }
+
     return (
         <>
         <Container>
@@ -22,6 +33,8 @@ function MainPage() {
 
                 <Loadmap></Loadmap>
             </div>
+
+            {/* <Button onClick={getAiAnswer}></Button> */}
         </Container>
         <Navbar></Navbar>
  
