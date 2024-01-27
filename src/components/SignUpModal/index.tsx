@@ -17,10 +17,22 @@ const SignUpModal = () => {
   const [arr, setArr] = useState<boolean[]>(new Array(3).fill(false));
   const [inputArr, setInputArr] = useState<string[]>(new Array(4).fill(""));
 
+  function isValidEmail(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function isValidTelNum(num: string): boolean {
+    const numRegex = /^\d{2,3}-?\d{3,4}-?\d{4}$/;
+    return numRegex.test(num);
+  }
+
   const handleSignUp = () => {
     if (
       (selectAll || !arr.includes(false) || arr.indexOf(false) === 2) &&
-      !inputArr.includes("")
+      !inputArr.includes("") &&
+      isValidEmail(inputArr[1]) &&
+      isValidTelNum(inputArr[2])
     ) {
       // 성공 회원가입 로직 작성
     } else {
