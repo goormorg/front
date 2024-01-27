@@ -57,6 +57,7 @@ function SearchPage() {
         >
           {item.map((el) => (
             <RoadmapItem
+              key={el.description}
               title={el.title}
               description={el.description}
               date={el.date}

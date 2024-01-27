@@ -47,8 +47,12 @@ function Navbar() {
           justifyContent: "space-around",
         })}
       >
-        {path.map((el) => (
-          <Button color="white" onClick={() => handleClick(el.url)}>
+        {path.map((el, index) => (
+          <Button
+            color="white"
+            key={el + "" + index}
+            onClick={() => handleClick(el.url)}
+          >
             <span className="material-icons">{el.icon}</span>
           </Button>
         ))}

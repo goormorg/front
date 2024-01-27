@@ -73,6 +73,7 @@ const SignUpModal = () => {
       <S.CheckBoxContainer>
         {arr.map((v, i) => (
           <CheckBox
+            key={i}
             onClick={() => {
               const prev = [...arr];
               prev[i] = !prev[i];
@@ -87,6 +88,7 @@ const SignUpModal = () => {
       <S.InputContainer>
         {inputArr.map((v, i) => (
           <Input
+            key={i}
             width={"219px"}
             placeholder={inputTextArr[i]}
             value={inputArr[i]}

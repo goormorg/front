@@ -10,7 +10,7 @@ const SelectExample: React.FC<Props> = ({ type }: any) => {
   return (
     <div>
       {mealsArr.map((meal: any) => (
-        <div>
+        <div key={meal.mealDescription}>
           <span>{meal.mealName}</span>
           <br />
           <span>{meal.mealDescription}</span>

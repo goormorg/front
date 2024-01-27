@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    useGetFoodImage("사과", setState);
+    useGetFoodImage("도넛", setState);
   }, []);
 
   return (
