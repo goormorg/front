@@ -18,7 +18,10 @@ const SignUpModal = () => {
   const [inputArr, setInputArr] = useState<string[]>(new Array(4).fill(""));
 
   const handleSignUp = () => {
-    if ((selectAll || !arr.includes(false)) && !inputArr.includes("")) {
+    if (
+      (selectAll || !arr.includes(false) || arr.indexOf(false) === 2) &&
+      !inputArr.includes("")
+    ) {
       // 성공 회원가입 로직 작성
     } else {
       alert("모두 입력해주세요");
