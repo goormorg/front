@@ -16,26 +16,21 @@ const Aim = ({ goPrev, goNext }: AimProps) => {
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
-    try {
-      goNext();
-      await axios.post(
-        process.env.REACT_APP_BASE_URL + "/v1/api/auth/signUp",
-        formUserData,
-      );
-      const { data } = await axios.post(
-        process.env.REACT_APP_BASE_URL + "/v1/api/auth/signIn",
-        {
-          email: formUserData.email,
-          password: formUserData.password,
-        },
-      );
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("email", formUserData.email);
-      goNext();
-    } catch {
-      alert("회원가입에 실패하였습니다!");
-      navigate("/intro");
-    }
+    await axios.post(
+      process.env.REACT_APP_BASE_URL + "/v1/api/auth/signUp",
+      formUserData
+    );
+    const { data } = await axios.post(
+      process.env.REACT_APP_BASE_URL + "/v1/api/auth/signIn",
+      {
+        email: formUserData.email,
+        password: formUserData.password,
+      }
+    );
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("email", formUserData.email);
+    navigate("/getroadmap");
+
   };
 
   useEffect(() => {
