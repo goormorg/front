@@ -8,6 +8,8 @@ const Intro = () => (
       식단을 찾아봐요
     </S.Title>
     <S.Text>what’s up healthup</S.Text>
+    <S.Button>로그인</S.Button>
+    <S.Button>회원가입</S.Button>
   </S.Wrapper>
 );
 

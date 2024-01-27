@@ -4,7 +4,7 @@ import { LoginPage } from "./pages/Login";
 import { MyPage } from "./pages/My";
 import { SearchPage } from "./pages/Search";
 
-import { SelectExample } from "components";
+import { Intro } from "pages";
 
 enum PATH {
   login = "/login",
@@ -23,7 +23,7 @@ function App() {
           <Route path={PATH.main} element={<MainPage />}></Route>
           <Route path={PATH.user} element={<MyPage />}></Route>
           <Route path={PATH.search} element={<SearchPage />}></Route>
-          <Route path={PATH.test} element={<SelectExample type="up" />}></Route>
+          <Route path={PATH.test} element={<Intro />}></Route>
 
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
