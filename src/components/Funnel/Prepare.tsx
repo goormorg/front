@@ -4,12 +4,15 @@ import rightArrow from "assets/rightArrow.svg";
 import backArrow from "assets/backArrow.svg";
 import example from "assets/example.png";
 import styled from "@emotion/styled";
+import { useNavigate } from "react-router-dom";
 
 interface PrepareProps {
   goPrev: () => void;
 }
 
 const Prepare = ({ goPrev }: PrepareProps) => {
+  const navigate = useNavigate();
+
   return (
     <S.Layout>
       <img src={backArrow} onClick={goPrev} width="14px" alt="이전" />
@@ -31,7 +34,9 @@ const Prepare = ({ goPrev }: PrepareProps) => {
         <GrayText>탄수화물 130g</GrayText>
       </DietBox>
       <MoreBox>
-        더 살펴보기 <RightArrow src={rightArrow} />
+        <div onClick={() => navigate("/roadmap")}>
+          더 살펴보기 <RightArrow src={rightArrow} />
+        </div>
       </MoreBox>
     </S.Layout>
   );
