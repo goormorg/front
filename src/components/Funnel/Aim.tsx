@@ -29,8 +29,8 @@ const Aim = ({ goPrev, goNext }: AimProps) => {
     );
     localStorage.setItem("token", data.token);
     localStorage.setItem("email", formUserData.email);
-    navigate("/getroadmap");
-
+    //navigate("/getroadmap");
+    goNext();
   };
 
   useEffect(() => {

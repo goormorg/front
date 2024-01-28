@@ -8,7 +8,6 @@ import { RoadmapPage } from "pages/Roadmap";
 import { useGetFoodImage } from "hooks";
 
 import { useEffect, useState } from "react";
-import { GetRoadmapPage } from "pages/GetRoadmap";
 
 enum PATH {
   login = "/login",
@@ -18,7 +17,6 @@ enum PATH {
   intro = "/intro",
   test = "/test",
   roadmap = "/roadmap",
-  getroadmap = "/getroadmap",
 }
 
 function App() {
@@ -39,7 +37,6 @@ function App() {
           <Route path={PATH.search} element={<SearchPage />}></Route>
           <Route path={PATH.intro} element={<Intro />}></Route>
           <Route path={PATH.roadmap} element={<RoadmapPage />}></Route>
-          <Route path={PATH.getroadmap} element={<GetRoadmapPage />}></Route>
 
           <Route
             path={PATH.test}
